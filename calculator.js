@@ -22,10 +22,10 @@ function operateCalc( inputA, inputB, operator){
     else if (operator == '-'){
         return subtract(inputA, inputB);
     }
-    else if (operator == 'x'){
+    else if (operator == 'x' || operator == '*'){
         return multiply(inputA, inputB);
     }
-    else if (operator == '\u00F7'){
+    else if (operator == '\u00F7' || operator == '/'){
         return divide(inputA, inputB);
     }
 }
