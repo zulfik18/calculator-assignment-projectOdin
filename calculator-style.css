@@ -1,0 +1,73 @@
+.container{
+    background-color: #333;
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+}
+.calculator-display{
+    height: 50px;
+    width: 200px;
+    border-style: solid;
+    border-color: beige;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    font-size: 20px;
+    background-color: azure;
+}
+.calculator-display p{
+    margin: 0px;
+}
+.calculator-button{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+.allButton{
+    width: 180px;
+    margin: auto;
+}
+.operator{
+    height: 30px;
+    width: 30px;
+    background-color: orange;
+    border-radius: 5px;
+}
+.allButton td button{
+    height: 30px;
+    width: 30px;
+}
+.clearButton{
+    margin-top: 10px;
+    width: 120px;
+    align-self: center;
+}
+.deleteButton{
+    margin-top: 10px;
+    width: 120px;
+    align-self: center;
+}
+.result{
+    display: flex;
+    margin: 0px;
+    justify-content: end;
+    font-size: 20px;
+    font-weight: bold;
+}
+.paraDigit{
+    font-size: 20px;
+}
+.equal{
+    background-color: orangered;
+    border-radius: 5px;
+}
+.clearButton{
+    background-color: bisque;
+    border-radius: 5px;
+}
+.deleteButton{
+    background-color: burlywood;
+    border-radius: 5px;
+}
