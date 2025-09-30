@@ -127,3 +127,47 @@ function expression(){
     previousNum = "";
     updateDisplay();
 }
+
+//keyboard support
+window.addEventListener('keydown', (event) =>{
+    event.preventDefault();
+
+    //Handle number input
+    if (event.key >='0' && event.key <='9' || event.key === '.'){
+        if (event.key==='.' && currentNum.includes('.')) return;
+        currentNum += event.key;
+        updateDisplay();
+    }
+
+    //Handle operator
+    if (event.key === '+' || event.key === '-' || event.key === '*' || event.key === '/') {
+        if (currentNum === ""){
+            return;
+        }
+        if (previousNum !== ""){
+            expression();
+        }
+        operatorSymbol = event.key;
+        previousNum = currentNum;   
+        currentNum = "";
+        updateDisplay();
+    }
+
+     // Handle Equals Key (Enter or =)
+     if (event.key === '=' || event.key === 'Enter') {
+        if (operatorSymbol === undefined){
+            return;
+        }
+        expression();
+    }
+
+    //Handle clear button using keyboard
+    if (event.key === 'Escape'){
+        clearButton();
+    }
+
+    //Handle delete or backspace button using keyboard
+    if (event.key === 'Delete' || event.key === 'Backspace'){
+        deleteButton();
+    }
+} )
